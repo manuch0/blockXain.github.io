@@ -1,0 +1,76 @@
+<div class="container py-3" style="max-width: 960px">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal">Choose the best Hacker</h1>
+        <p class="fs-5 text-muted">This vote consists of choosing the most appropiate hacker and appointing him CISO Ministry of Defense based on what he has achived during his career.</p>
+      </div>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-secondary">
+              <div class="card-header py-3 text-white bg-secondary border-secondary">
+                <h4 class="my-0 fw-normal">Candidate A</h4>
+              </div>
+              <div class="card-header py-3 text-white bg-secondary border-secondary">
+                <img src="../../../assets/Captura.JPG" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><small class="text-muted fw-light">Gary McKinnon</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Hacktivist since 2001</li>
+                  <li>Nickname: Solo</li>
+                  <li>Largest computer assault on a military system of all time.</li>
+                  <li>Currently: Hacker and Computer Engineer</li>
+                </ul>
+                <a href="miner">
+                  <button type="button" class="w-100 btn btn-lg btn-secondary" (click)="getCandidate('Candidate A')" (click)="sendVote()">Vote</button>
+                </a>
+                
+              </div>
+            </div>
+          </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-secondary">
+              <div class="card-header py-3 text-white bg-secondary border-secondary">
+                <h4 class="my-0 fw-normal">Candidate B</h4>
+              </div>
+              <div class="card-header py-3 text-white bg-secondary border-secondary">
+                <img src="../../../assets/Captura.JPG" class="card-img-top" alt="...">
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><small class="text-muted fw-light">Kevin Mitnick</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Hacktivist since 1980</li>
+                  <li>Nickname: El Cóndor</li>
+                  <li>Gain access to North American Aerospace Defense Command.</li>
+                  <li>Currently: Social Engineer Consultoring</li>
+                </ul>
+                <a href="miner">
+                  <button type="button" class="w-100 btn btn-lg btn-secondary" (click)="getCandidate('Candidate B')" (click)="sendVote()">Vote</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-secondary">
+            <div class="card-header py-3 text-white bg-secondary border-secondary">
+              <h4 class="my-0 fw-normal">Candidate C</h4>
+            </div>
+            <div class="card-header py-3 text-white bg-secondary border-secondary">
+              <img src="../../../assets/Captura.JPG" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title"><small class="text-muted fw-light">Albert González</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Hacktivist since 2005</li>
+                <li>Nickname: Segvec</li>
+                <li>Credit card theft and subsequent resale of more than 170M cards.</li>
+                <li>Currently: Hacker and Computer Scientist</li>
+              </ul>
+              <a href="miner">
+                <button type="button" class="w-100 btn btn-lg btn-secondary" (click)="getCandidate('Candidate C')" (click)="sendVote()">Vote</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</div>

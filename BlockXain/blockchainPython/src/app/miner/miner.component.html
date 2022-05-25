@@ -1,0 +1,79 @@
+<script>
+  $(document).ready(function () {
+    $('#example').DataTable();
+  });
+</script>
+<div class="container px-4 py-5" id="hanging-icons">
+  <h2 class="pb-2 border-bottom">Actions</h2>
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="col d-flex align-items-start">
+      <div class="icon-square text-dark flex-shrink-0 me-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-info"
+          viewBox="0 0 16 13">
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="pb-2 border-bottom">Blockchain Info</h2>
+        <p>This funcionality allows to obtain the current blockchain information and displays it in the monitoring table.</p>
+        <a class="btn btn-secondary" (click)="infoChain()">
+          Info
+        </a>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div class="icon-square text-dark flex-shrink-0 me-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-box"
+          viewBox="0 0 16 16">
+          <path
+            d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="pb-2 border-bottom">Mine Block</h2>
+        <p>Add a new block with imformation to the blockchain to lengthen the chain and store more information.</p>
+        <a class="btn btn-secondary" (click)="mineBlock()">
+          Mine
+        </a>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div class="icon-square text-dark flex-shrink-0 me-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-check-all"
+          viewBox="0 0 16 13">
+          <path
+            d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="pb-2 border-bottom">Blockchain Validation</h2>
+        <p>Check that information contained in the chain has not been modified and the link between blocks has not broken.</p>
+        <a class="btn btn-secondary" (click)="validChain()">
+          Validator
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container px-4 py-5">
+  <h2 class="pb-2 border-bottom">BlockXain monitoring</h2>
+  <table id="example" class="table table-striped" style="width:100%">
+    <thead>
+      <tr>
+        <th>Block Number</th>
+        <th>Previous Hash</th>
+        <th>Timestamp</th>
+        <th>Transactions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of infoBC">
+        <td>{{ item.Index }}</td>
+        <td>{{ item.PreviousHash }}</td>
+        <td>{{ item.Timestamp }}</td>
+        <td *ngFor="let trans of item.Transactions[0] | keyvalue">{{ trans.key }} : {{ trans.value }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,14 @@
+footer {
+    display: block;
+    
+}
+
+.container {
+    width: auto;
+    max-width: 600px;
+    padding: 0 5px;
+}
+
+.container p {
+    text-align: center;
+}
